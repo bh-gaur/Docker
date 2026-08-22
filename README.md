@@ -12,9 +12,9 @@ Docker uses a client–server architecture. The Docker client talks to the Docke
 3. The Docker Daemon handles container lifecycle tasks.
 4. Communication happens over a REST API using sockets or networks.
 
-https://media.geeksforgeeks.org/wp-content/uploads/20251218122638607429/docker_host.webp
+![Docker Host Architecture](https://media.geeksforgeeks.org/wp-content/uploads/20251218122638607429/docker_host.webp)
 
-https://media.geeksforgeeks.org/wp-content/uploads/20260206152754426458/docker_objects.webp
+![Docker Objects](https://media.geeksforgeeks.org/wp-content/uploads/20260206152754426458/docker_objects.webp)
 
 ## Images
 
