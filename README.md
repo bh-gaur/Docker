@@ -3,6 +3,7 @@
 Docker is a platform for developing, shipping, and running applications in lightweight, portable containers. Containers encapsulate an application and its dependencies (libraries, frameworks, etc.), ensuring that the application runs consistently across different computing environments, whether it's on a developer's machine, a testing environment, or a production server.
 
 ## Installation
+
 - [Installation Script (`install.sh`)](https://github.com/bh-gaur/docker/blob/main/install.sh)
 
 ---
@@ -25,6 +26,8 @@ Docker uses a client–server architecture. The Docker client talks to the Docke
 ## Core Components
 
 ### 📦 Images
+
+A Docker image is like a blueprint or a recipe for an application.
 
 An image is a read-only, inert template that contains the instructions for creating a Docker container. Think of it as a blueprint or a class in object-oriented programming.
 
@@ -50,6 +53,7 @@ Since a container's writable layer is ephemeral (data is lost when the container
 ### 🌐 Networking
 
 Docker provides pluggable network drivers for container communication:
+
 - **bridge**: Default network driver for standalone containers.
 - **host**: Removes network isolation between container and host.
 - **overlay**: Enables networking across multiple Docker daemons (Swarm).
@@ -59,13 +63,13 @@ Docker provides pluggable network drivers for container communication:
 
 ## ⚡ Quick CLI Reference
 
-| Command | Description |
-| :--- | :--- |
-| `docker build -t app:v1 .` | Build image from Dockerfile |
+| Command                                      | Description                               |
+| :------------------------------------------- | :---------------------------------------- |
+| `docker build -t app:v1 .`                   | Build image from Dockerfile               |
 | `docker run -d -p 8080:80 --name web app:v1` | Run container in background mapping ports |
-| `docker ps -a` | List all containers |
-| `docker logs -f <container_id>` | Stream container logs |
-| `docker exec -it <container_id> sh` | Open interactive terminal in container |
-| `docker stop <container_id>` | Gracefully stop running container |
-| `docker rm <container_id>` | Remove a stopped container |
-| `docker rmi <image_id>` | Remove a local image |
+| `docker ps -a`                               | List all containers                       |
+| `docker logs -f <container_id>`              | Stream container logs                     |
+| `docker exec -it <container_id> sh`          | Open interactive terminal in container    |
+| `docker stop <container_id>`                 | Gracefully stop running container         |
+| `docker rm <container_id>`                   | Remove a stopped container                |
+| `docker rmi <image_id>`                      | Remove a local image                      |
