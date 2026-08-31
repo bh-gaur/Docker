@@ -1,0 +1,16 @@
+[project]
+name = "python-test"
+version = "0.1.0"
+description = "Flask application with SQLAlchemy"
+requires-python = ">=3.8"
+dependencies = [
+    "Flask==2.0.3",
+    "Flask-SQLAlchemy==2.5.1",
+    "SQLAlchemy==1.4.27",
+    "Werkzeug==2.0.3",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+

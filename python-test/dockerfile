@@ -4,11 +4,12 @@ FROM python:3.9-slim
 # Step 2: Set the working directory inside the container
 WORKDIR /app
 
-# Step 3: Copy the requirements file and install dependencies
-COPY requirements.txt /app
-RUN pip install --no-cache-dir -r requirements.txt
+# Step 3: Copy pyproject.toml and install dependencies
+COPY pyproject.toml /app/
+RUN pip install --no-cache-dir --upgrade pip setuptools && \
+    pip install --no-cache-dir .
 
-# Step 4: Copy the application code into the container
+# Step 4: Copy the rest of the application code into the container
 COPY . /app
 
 # Step 5: Expose the Flask port
